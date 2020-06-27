@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="18G1012" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Schedule" representedClassName="Schedule" syncable="YES" codeGenerationType="class">
+        <attribute name="hours" optional="YES" attributeType="String"/>
+        <attribute name="menu" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="truck" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Truck" inverseName="schedules" inverseEntity="Truck"/>
+    </entity>
+    <entity name="Truck" representedClassName="Truck" syncable="YES" codeGenerationType="class">
+        <attribute name="hour" optional="YES" attributeType="String"/>
+        <attribute name="menu" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="schedules" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Schedule" inverseName="truck" inverseEntity="Schedule"/>
+    </entity>
+    <elements>
+        <element name="Truck" positionX="-2488.40234375" positionY="-792.77734375" width="128" height="103"/>
+        <element name="Schedule" positionX="-2237.69921875" positionY="-792.9375" width="128" height="103"/>
+    </elements>
+</model>
